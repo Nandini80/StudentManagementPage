@@ -15,6 +15,6 @@ export const getStudents = (pageSize: number, pageNumber: number): Promise<Stude
       console.log(students);
       const paginatedData = students.slice(startIndex, startIndex + pageSize);
       resolve(paginatedData);
-    }, 2000);
+    }, 200);
   });
 };
