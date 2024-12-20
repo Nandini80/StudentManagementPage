@@ -1,4 +1,5 @@
 import React from 'react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 interface Student {
   name: string;
@@ -14,28 +15,30 @@ interface StudentTableProps {
 
 const StudentTable: React.FC<StudentTableProps> = ({ students }) => {
   return (
-    <table className="min-w-full table-auto border-collapse border border-gray-200">
-      <thead>
-        <tr>
-          <th className="border border-gray-300 px-4 py-2">Name</th>
-          <th className="border border-gray-300 px-4 py-2">Age</th>
-          <th className="border border-gray-300 px-4 py-2">Marks</th>
-          <th className="border border-gray-300 px-4 py-2">Roll Number</th>
-          <th className="border border-gray-300 px-4 py-2">Attendance</th>
-        </tr>
-      </thead>
-      <tbody>
-        {students.map((student) => (
-          <tr key={student.rollNumber}>
-            <td className="border border-gray-300 px-4 py-2">{student.name}</td>
-            <td className="border border-gray-300 px-4 py-2">{student.age}</td>
-            <td className="border border-gray-300 px-4 py-2">{student.marks}</td>
-            <td className="border border-gray-300 px-4 py-2">{student.rollNumber}</td>
-            <td className="border border-gray-300 px-4 py-2">{student.attendance}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="overflow-x-auto">
+      <Table className="min-w-full">
+        <TableHeader>
+          <TableRow>
+            <TableHead>Name</TableHead>
+            <TableHead>Age</TableHead>
+            <TableHead>Marks</TableHead>
+            <TableHead>Roll Number</TableHead>
+            <TableHead>Attendance</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {students.map((student) => (
+            <TableRow key={student.rollNumber}>
+              <TableCell>{student.name}</TableCell>
+              <TableCell>{student.age}</TableCell>
+              <TableCell>{student.marks}</TableCell>
+              <TableCell>{student.rollNumber}</TableCell>
+              <TableCell>{student.attendance}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
   );
 };
 
