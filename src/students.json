@@ -1,0 +1,22 @@
+[
+    {
+    "name": "John Doe",
+    "age": 20,
+    "marks": 85,
+    "avgMarks": 80,
+    "rollNumber": "A102",
+    "class": "10th Grade",
+    "city": "New York",
+    "attendance": "95%"
+    },
+    {
+    "name": "Jane Smith",
+    "age": 19,
+    "marks": 78,
+    "avgMarks": 74,
+    "rollNumber": "B203",
+    "class": "10th Grade",
+    "city": "Los Angeles",
+    "attendance": "89%"
+    }
+]
