@@ -5,7 +5,7 @@ import Pagination from "./components/Pagination";
 import { getStudents, Student } from "./utils/getStudents";
 
 const App: React.FC = () => {
-  const [students, setStudents] = useState<Student[]>([]);
+  const [students, setStudents] = useState<Student[]>([]); // type of state -> Student[] and empty array
   const [page, setPage] = useState(1);
   const [pageSize] = useState(10);
   const [hasMore, setHasMore] = useState(true);
