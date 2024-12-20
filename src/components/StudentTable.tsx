@@ -16,24 +16,29 @@ interface StudentTableProps {
 const StudentTable: React.FC<StudentTableProps> = ({ students }) => {
   return (
     <div className="overflow-x-auto">
-      <Table className="min-w-full">
-        <TableHeader>
+      <Table className="min-w-full border-collapse border border-gray-300 rounded-lg shadow-md">
+        <TableHeader className="bg-gray-100">
           <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Age</TableHead>
-            <TableHead>Marks</TableHead>
-            <TableHead>Roll Number</TableHead>
-            <TableHead>Attendance</TableHead>
+            <TableHead className="py-3 px-4 font-semibold text-gray-700">Name</TableHead>
+            <TableHead className="py-3 px-4 font-semibold text-gray-700">Age</TableHead>
+            <TableHead className="py-3 px-4 font-semibold text-gray-700">Marks</TableHead>
+            <TableHead className="py-3 px-4 font-semibold text-gray-700">Roll Number</TableHead>
+            <TableHead className="py-3 px-4 font-semibold text-gray-700">Attendance</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {students.map((student) => (
-            <TableRow key={student.rollNumber}>
-              <TableCell>{student.name}</TableCell>
-              <TableCell>{student.age}</TableCell>
-              <TableCell>{student.marks}</TableCell>
-              <TableCell>{student.rollNumber}</TableCell>
-              <TableCell>{student.attendance}</TableCell>
+          {students.map((student, index) => (
+            <TableRow
+              key={student.rollNumber}
+              className={`${
+                index % 2 === 0 ? "bg-white" : "bg-gray-50"
+              } hover:bg-gray-200 transition`}
+            >
+              <TableCell className="py-3 px-4">{student.name}</TableCell>
+              <TableCell className="py-3 px-4">{student.age}</TableCell>
+              <TableCell className="py-3 px-4">{student.marks}</TableCell>
+              <TableCell className="py-3 px-4">{student.rollNumber}</TableCell>
+              <TableCell className="py-3 px-4">{student.attendance}</TableCell>
             </TableRow>
           ))}
         </TableBody>
