@@ -22,14 +22,12 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Student Management</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Student's Details</h1>
 
-      {/* Table for Desktop View */}
       <div className="hidden md:block">
         <StudentTable students={students} />
       </div>
 
-      {/* Cards for Mobile View */}
       <div className="md:hidden">
         {students.map((student) => (
           <StudentCard key={student.rollNumber} student={student} />
