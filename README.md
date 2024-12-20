@@ -24,12 +24,3 @@ A responsive Student Management Page built with **React**, **TypeScript**, and *
 - **Build Tool**: Vite
 
 ---
-
-## **Getting Started**
-
-### Prerequisites
-Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-
----
